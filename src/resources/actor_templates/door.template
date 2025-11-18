@@ -1,0 +1,8 @@
+{
+  "x": 0,
+  "y": 0,
+  "view": "d",
+  "blocking": false,
+  "nearby_dialogue": "A battered old door stands here, slightly ajar. It seems to beckon you forward.",
+  "contact_dialogue": "The door creaks loudly as you open it. [proceed to 2]"
+}

@@ -31,7 +31,11 @@ void Engine::GameLoop() {
         std::exit(0);
     }
 
+    // Load templates
+    template_db.loadTemplates();
+
     // Load initial scene
+    scene_db.setTemplateDB(&template_db);
     scene_db.loadScene(game_config["initial_scene"].GetString(), actors);
     player_actor = &actors.back();  // Gets the last actor (player) - assign to member variable
 
@@ -94,8 +98,21 @@ void Engine::Render() {
     }
 
     std::cout << "health : " << health << ", score : " << score << std::endl;
-    std::cout << "Please make a decision..." << std::endl;
-    std::cout << "Your options are \"n\", \"e\", \"s\", \"w\", \"quit\"" << std::endl;
+    if (!changing_scene) {
+        std::cout << "Please make a decision..." << std::endl;
+        std::cout << "Your options are \"n\", \"e\", \"s\", \"w\", \"quit\"" << std::endl;
+    } else {
+        changing_scene = false;
+        actors.clear();
+        scene_db.loadScene("level_" + std::to_string(next_scene) + ".scene", actors);
+        for (auto& actor : actors) {
+            if (actor.actor_name == "player") {
+                player_actor = &actor;
+                break;
+            }
+        }
+        Render();
+    }
 }
 
 void Engine::Input() {
@@ -173,5 +190,11 @@ void Engine::find_dialogue_command(std::string str) {
     else if (str.find("game over") != std::string::npos) {
         running = false;
         std::cout << game_config["game_over_bad_message"].GetString() << std::endl;
+    }
+    else if (str.find("proceed to ") != std::string::npos) {
+        size_t pos = str.find("proceed to ") + std::string("proceed to ").length();
+        std::string scene_name = str.substr(pos, 1);
+        changing_scene = true;
+        next_scene = std::stoi(scene_name);
     }
 }

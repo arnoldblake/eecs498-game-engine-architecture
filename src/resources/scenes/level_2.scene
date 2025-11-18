@@ -1,0 +1,15 @@
+{
+    "actors": [
+        {
+            "template": "wall",
+            "x": 3,
+            "y": 3
+        },
+        {
+            "name": "player",
+            "x": 1,
+            "y": 1,
+            "view": "p"
+        }
+    ]
+}

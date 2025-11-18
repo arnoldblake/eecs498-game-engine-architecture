@@ -1,53 +1,74 @@
 {
     "actors": [
         {
-          "name": "Wall",
+          "template": "wall",
           "x": 4,
-          "y": 0,
-          "view": "b",
-          "blocking": true
+          "y": 0
         },
         {
-          "name": "Wall",
+          "template": "wall",
           "x": 5,
-          "y": 0,
-          "view": "b",
-          "blocking": true
+          "y": 0
         },
         {
-          "name": "Wall",
+          "template": "wall",
           "x": 6,
-          "y": 0,
-          "view": "b",
-          "blocking": true
+          "y": 0
         },
         {
-          "name": "Wall",
+          "template": "wall",
           "x": 0,
-          "y": 0,
-          "view": "b",
-          "blocking": true
+          "y": 0
         },
         {
-          "name": "Wall",
+          "template": "wall",
           "x": 1,
-          "y": 0,
-          "view": "b",
-          "blocking": true
+          "y": 0
         },
         {
-          "name": "Wall",
+          "template": "wall",
           "x": 2,
-          "y": 0,
-          "view": "b",
-          "blocking": true
+          "y": 0
         },
         {
-          "name": "Wall",
+          "template": "wall",
           "x": 3,
-          "y": 0,
-          "view": "b",
-          "blocking": true
+          "y": 0
+        },
+        {
+          "template": "wall",
+          "x": 0,
+          "y": 1
+        },
+        {
+          "template": "wall",
+          "x": 6,
+          "y": 1
+        },
+        {
+          "template": "wall",
+          "x": 0,
+          "y": 2
+        },
+        {
+          "template": "wall",
+          "x": 6,
+          "y": 2
+        },
+        {
+          "template": "wall",
+          "x": 0,
+          "y": 3
+        },
+        {
+          "template": "wall",
+          "x": 6,
+          "y": 3
+        },
+        {
+          "template": "door",
+          "x": 4,
+          "y": 4
         },
         {
           "name": "friend1",
@@ -59,8 +80,8 @@
           "contact_dialogue": "(you're standing on your friend, but they don't seem to mind. They are a good friend.)"
         },
         {
-          "name": "Player",
-          "x": 0,
+          "name": "player",
+          "x": 1,
           "y": 1,
           "view": "p",
           "blocking": false

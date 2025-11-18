@@ -1,0 +1,8 @@
+{
+  "x": 2,
+  "y": 2,
+  "view": "f",
+  "blocking": false,
+  "nearby_dialogue": "H-hey (you spot a nearby friend in the darkness). Thank you for f-finding me. I'll sit here and rest a bit. [score up]",
+  "contact_dialogue": "(you're standing on your friend, but they don't seem to mind. They are a good friend.)"
+}

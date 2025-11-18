@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "SceneDB.hpp"
+#include "TemplateDB.hpp"
 
 #include "rapidjson/document.h"
 #include "glm/glm.hpp"
@@ -34,9 +35,12 @@ public:
     void Input();
     void Update();
     void Render();
-private:
     SceneDB scene_db;
+    TemplateDB template_db;
+private:
     bool running = true;
+    bool changing_scene = false;
+    int next_scene = 0;
     std::string last_input = "";
 
     std::vector<Actor> actors;

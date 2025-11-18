@@ -15,6 +15,7 @@ target_sources(${EXECUTABLE_NAME}
         src/main.cpp
         src/Engine.cpp
         src/SceneDB.cpp
+        src/TemplateDB.cpp
 )
 
 # Include directories
