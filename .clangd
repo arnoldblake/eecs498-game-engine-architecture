@@ -2,3 +2,4 @@ CompileFlags:
   Add:
     - "--std=c++20"
     - "--include-directory=C:\\Users\\barnold\\Documents\\repos\\eecs498-game-engine\\src\\include"
+    - "--include-directory=C:\\Users\\barnold\\Documents\\repos\\eecs498-game-engine\\SDL\\include"
